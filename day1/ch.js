@@ -29,3 +29,10 @@ function getSum(nums, target) {
 // nums = [3,2,4], target = 6
 nums = [3,3], target = 6
 console.log(getSum(nums, target))
+// 过程
+// 写的过程中没有想到好的算法，写了一个复杂度O(n^2)的算法 
+
+// 伙伴评价
+// 
+
+// 感悟总结：

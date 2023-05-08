@@ -27,6 +27,6 @@ function twoSum(nums, target) {
 // try 3.成功了
 
 // 伙伴评价
-
+// 使用对象数据结构巧妙的将复杂度降低到了O(n)
 
 // 感悟总结：
