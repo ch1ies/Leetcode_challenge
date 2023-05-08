@@ -33,6 +33,7 @@ console.log(getSum(nums, target))
 // 写的过程中没有想到好的算法，写了一个复杂度O(n^2)的算法 
 
 // 伙伴评价
-// 
+// 边界条件考虑的比较周全；而且用数组result收集结果，可以找到多组满足条件的结果；
+// 建议：1.功能函数里，用了let，和var，可以统一为let 2.nums.length 可以提取出来 let len = nums.length，更加简洁
 
 // 感悟总结：
