@@ -45,6 +45,6 @@ console.log('getAddNum(l1, l2): ', getAddNum(l1, l2));
  */
 
 // 伙伴评价
-
+// 结果对了，过程没有用链表
 
 // 感悟总结：
