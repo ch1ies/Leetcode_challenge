@@ -32,7 +32,7 @@ function twoSum(nums, target) {
 // 感悟总结：
 // 1. 应该在逻辑中，加上收集结果的数组，这样可以输出更多的结果
 // 2. 边界条件问题没有考虑
-// 3. 对两数之和的其他方案没有实现，需要补充；对于编程过程的 try 2 重写并验证
+// 3. 对两数之和的其他方案没有实现，需要补充；对于编程过程的 try 2 重写并验证【经过验证，这种思路是错误的】
 // 4. 结合以上几点问题，重写一个功能函数
 
 /**
@@ -40,5 +40,18 @@ function twoSum(nums, target) {
  */
 
 function twoSum(nums, target) {
-  // 待实现
+  if(!Array.isArray(nums) || typeof target !== 'number') {
+      return console.log('传参有误')
+  }
+  let ret = [], mapToInx = {}
+  if(nums.length < 2) {
+      return ret 
+  }
+  for(let i = 0, len = nums.length; i < len; i++) {
+      if(mapToInx[nums[i]] !== undefined) {
+          ret.push([mapToInx[nums[i]], i])
+      }
+      mapToInx[target - nums[i]] = i 
+  }
+  return ret 
 }
