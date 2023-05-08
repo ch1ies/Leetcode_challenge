@@ -47,13 +47,13 @@ function getSum(nums, target) {
  * 两数之和，重构版
  */
 function getSum1(nums, target) {
+    let len = nums.length
     // 边界判断
-    if (nums.length < 2) {
+    if (len < 2) {
         return new Error('数组的长度需要大于2')
     }
     let result = []
-    let len = nums.length
-    for (var i = 0; i < len; i++) {
+    for (let i = 0; i < len; i++) {
         for (var j = i + 1; j < len; j++) {
             let preVal = nums[i]
             let nextVal = nums[j]
