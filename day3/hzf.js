@@ -1,0 +1,52 @@
+/**
+ * 无重复字符的最长子串 
+ * @param {string} str 字符串
+ * @returns {number} 最大子串的长度
+ */
+function maxLenSubStr(str) {
+    if(typeof str !== 'string') {
+        console.log('请输入字符串')
+        return false
+    }
+    let maxLen = 0 
+    if(str.length === maxLen) {
+        return maxLen
+    }
+    let arr = str.split('')
+    let ret = [], temp = ''
+    for(let i = 0, len = arr.length; i < len; i++) {
+        if(temp.includes(arr[i])) {
+            maxLen = Math.max(maxLen, temp.length)
+            ret.push(temp)
+            temp = arr[i]
+        }else {
+            temp += arr[i]
+        }
+    }
+    ret.push(temp)
+    maxLen = Math.max(maxLen, temp.length)
+    console.log(ret) // 查看子串列表
+    return maxLen
+}
+
+
+// 输入：l1 = [2,4,3], l2 = [5,6,4] 输出：[7,0,8]
+// 输入：l1 = [0], l2 = [0] 输出：[0]
+// 输入：l1 = [9,9,9,9,9,9,9], l2 = [9,9,9,9] 输出：[8,9,9,9,0,0,0,1]
+
+// 过程：
+// try 1.在最后一次子串构造之后，没有加入比较判断，导致结果出错
+// try 2.成功了
+
+// 伙伴评价
+// 
+
+// 感悟总结：
+
+
+/**
+ * 无重复字符的最长子串 问题重构
+ */
+function maxLenSubStr(str) {
+    // 待实现
+}
