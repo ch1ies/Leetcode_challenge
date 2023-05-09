@@ -1,7 +1,8 @@
 /**
- * 
+ *  两数相加 时间复杂度O(n)
  * @param {*} arr1 非空链表1 
  * @param {*} arr2 非空链表2
+ * @returns {Array} 求和之后的数组
  */
 function getAddNum(arr1, arr2) {
     // 1. 得到两个相等长度的链表，不足的位数补0
@@ -48,3 +49,7 @@ console.log('getAddNum(l1, l2): ', getAddNum(l1, l2));
 // 结果对了，过程没有用链表
 
 // 感悟总结：
+/**
+ * 1. 思考的时候慢一点，有些条件没有理解好
+ * 2. 可以使用链表数据结构重新实现一遍
+ */
