@@ -33,5 +33,7 @@ console.log('findMostLengthStr(s): ', findMostLengthStr(s));
  * 刚开始想用递归实现，后面发现边界条件控制不好，容易造成栈溢出，就想着用双指针实现
  */
 // 伙伴评价
+// 优点：使用双指针较少的循环次数就可以求得结果
+// 建议：1.@returns 缺少返回类型和描述 2.输入值string加上类型判断
 
 // 感悟总结：
