@@ -39,7 +39,7 @@ function maxLenSubStr(str) {
 // try 2.成功了
 
 // 伙伴评价
-// 
+// 当 s = 'abcdaecbb' 此时应该输出 5（bcdae）
 
 // 感悟总结：
 // 1.逻辑判断中，欠缺考虑
