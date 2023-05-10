@@ -25,7 +25,8 @@ function findMostLengthStr(string) {
 
 // let s = "abcabcbb" // 3
 // let s = "bbbbb" // 1
-let s = "pwwkew" // 3
+// let s = "pwwkew" // 3
+// let s = 'abcdaecbb' // 
 console.log('findMostLengthStr(s): ', findMostLengthStr(s));
 
 // 过程

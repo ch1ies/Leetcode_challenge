@@ -53,3 +53,7 @@ console.log('getAddNum(l1, l2): ', getAddNum(l1, l2));
  * 1. 思考的时候慢一点，有些条件没有理解好
  * 2. 可以使用链表数据结构重新实现一遍
  */
+
+function getAddNum(l1, l2) {
+    // 带实现
+}
