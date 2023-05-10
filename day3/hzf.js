@@ -65,7 +65,7 @@ function maxLenSubStr(str) {
         if(temp.includes(arr[i])) {
             maxLen = Math.max(maxLen, temp.length)
             ret.push(temp)
-            i = count ++ 
+            i = ++ count
             temp = arr[i]
         }else {
             temp += arr[i]
