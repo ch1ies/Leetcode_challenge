@@ -42,11 +42,37 @@ function maxLenSubStr(str) {
 // 
 
 // 感悟总结：
+// 1.逻辑判断中，欠缺考虑
+// 2.少考虑了边界情况，不能涵盖所有用例
+// 3. 结合以上几点问题，重写一个功能函数
 
 
 /**
  * 无重复字符的最长子串 问题重构
  */
 function maxLenSubStr(str) {
-    // 待实现
+    if(typeof str !== 'string') {
+        console.log('请输入字符串')
+        return false
+    }
+    let maxLen = 0 
+    if(str.length === maxLen) {
+        return maxLen
+    }
+    let arr = str.split('')
+    let ret = [], temp = '', count = 0
+    for(let i = 0, len = arr.length; i < len; i++) {
+        if(temp.includes(arr[i])) {
+            maxLen = Math.max(maxLen, temp.length)
+            ret.push(temp)
+            i = count ++ 
+            temp = arr[i]
+        }else {
+            temp += arr[i]
+        }
+    }
+    ret.push(temp)
+    maxLen = Math.max(maxLen, temp.length)
+    console.log(ret) // 查看子串列表
+    return maxLen
 }

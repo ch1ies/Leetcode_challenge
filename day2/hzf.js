@@ -84,5 +84,65 @@ function linkToArr(head) {
  * 两数相加 问题重构
  */
 function addTwoNumbers(l1, l2) {
-    // 待实现
+    function Node(val) {
+        this.val = val 
+        this.next = null
+    }
+    function createLink(arr) {
+        let head = null, cur = null 
+        for(let i = 0, len = arr.length; i < len; i++) {
+            let node = new Node(arr[i])
+            if(!head) {
+                cur = head = node
+            }else {
+                cur.next = node 
+                cur = node 
+            }
+        }
+        return head
+    }
+    function fromLinkToArr(head, ret = []) {
+        if(!head) {
+            return ret
+        }
+        let cur = head 
+        while(cur) {
+            ret.push(cur.val)
+            cur = cur.next
+        }
+        return ret
+    }
+    function notArr(arr) {
+        return !Array.isArray(arr)
+    }
+    if(notArr(l1) || notArr(l2)) {
+        console.log('参数必须为数组')
+        return false
+    }
+    let link1 = createLink(l1)
+    let link2 = createLink(l2)
+    let link3 = null, cur3 = null
+    let cur1 = link1, cur2 = link2
+    let carry = 0
+    while(cur1 || cur2) {
+        let num1 = cur1 && cur1.val || 0
+        let num2 = cur2 && cur2.val || 0
+        let sum = num1 + num2 + carry
+        carry = Math.floor(sum / 10)
+        let final = sum % 10
+        let node = new Node(final)
+        if(!link3) {
+           cur3 = link3 = node
+        }else {
+            cur3.next = node 
+            cur3 = node 
+        }
+        cur1 = cur1 && cur1.next || null 
+        cur2 = cur2 && cur2.next || null 
+        if(!cur1 && !cur2 && carry) {
+            cur3.next = new Node(carry) 
+        }
+    }
+    console.log(link3) // 生成的链表
+    return fromLinkToArr(link3)
 }
