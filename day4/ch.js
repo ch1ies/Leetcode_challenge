@@ -75,5 +75,7 @@ console.log('findMiddleNum(nums1, nums2): ', findMiddleNum2(nums1, nums2));
  */
 
 // 伙伴评价
+// 使用了多种方法完成了功能，比较全面
+// 建议：1.输入传参没有进行类型判断 2.时间复杂度超越了题目的O(log (m+n))
 
 // 总结
