@@ -67,3 +67,13 @@ var quickSort = function (arr) {
 // const nums1 = [1, 3], nums2 = [2] // 2
 const nums1 = [1,2], nums2 = [3,4] // 5
 console.log('findMiddleNum(nums1, nums2): ', findMiddleNum2(nums1, nums2));
+
+// 过程
+/**
+ * 1. 通过for 循环判断边界条件，递归调用不断的进行排序返回，未能在20分钟内实现
+ * 2. 改用快速排序方式
+ */
+
+// 伙伴评价
+
+// 总结
