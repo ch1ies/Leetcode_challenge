@@ -62,8 +62,8 @@ function findMostLengthStr2(string) {
     let next = 0; // 下一个循环的游标
     while(next < strArr.length) {
         if (res.includes(strArr[next])) { // 当下一个字符串在数组中存在时，记录长度
-            if (maxLen < (next - start - 1)) {
-                maxLen = next -start - 1;
+            if (maxLen < res.length) {
+                maxLen = res.length;
             }
             start++ // 开始游标指向下一位开始查找
             next = start 
@@ -82,5 +82,5 @@ function findMostLengthStr2(string) {
 // let s = "bbbbb" // 1
 // let s = "pwwkew" // 3
 // let s = 'abcdaecbb' // 5
-let s = '我❤️你时谁你asd'
+let s = '12abcxyzdaecbb' // 9
 console.log('findMostLengthStr(s): ', findMostLengthStr2(s));
