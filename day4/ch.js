@@ -79,3 +79,7 @@ console.log('findMiddleNum(nums1, nums2): ', findMiddleNum2(nums1, nums2));
 // 建议：1.输入传参没有进行类型判断 2.时间复杂度超越了题目的O(log (m+n))
 
 // 总结
+/**
+ * 1. 加上类型判断
+ * 2. 需熟悉排序算法
+ */
