@@ -11,10 +11,12 @@ function theLongestStr(str) {
         if(s.length < 2) return false
         return s.split('').reverse().join('') === s
     }
+    let maxStr = ''
     let sArr = str.split(''), temp = '', ret = [], count = 0
     for(let i = 0, len = sArr.length; i < len; i++) {
         temp += sArr[i]
         if(isMoslems(temp)) {
+            maxStr = maxStr.length > temp.length ? maxStr : temp
             ret.push(temp)
         }
         console.log(temp)
@@ -23,8 +25,8 @@ function theLongestStr(str) {
             temp = sArr[i]
         }
     }
-    isMoslems(temp) && ret.push(temp)
-    return ret
+    console.log(ret)
+    return maxStr
 }
 
 
