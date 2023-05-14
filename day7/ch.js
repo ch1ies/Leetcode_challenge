@@ -66,6 +66,10 @@ console.log('findMostSumArr(nums): ', findMostSumArr(nums));
 // 总结
 // 思考使用O(n) 的算法实现
 
+// 每周总结
+// 1. 遇到问题时，先想解决思路，不需要一开始就想做的完美
+// 2，复杂问题，对于边界条件的判断处理还需要加强
+
 function findMostSumArr2 () {
     // 待实现
 }
