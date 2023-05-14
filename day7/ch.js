@@ -61,7 +61,8 @@ console.log('findMostSumArr(nums): ', findMostSumArr(nums));
 
 
 // 伙伴评价
-
+// 边界条件判断很全面，逻辑的时间复杂度也少
+// 建议：1.逻辑可以调整下，使其满足所有情况
 
 // 总结
 // 思考使用O(n) 的算法实现
