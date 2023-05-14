@@ -48,5 +48,31 @@ function theLongestStr(str) {
  * 最长回文子串 问题重构
  */
 function theLongestStr(str) {
-    // 待处理
+    if(typeof str !== 'string' || !str) {
+        console.log('请输入有效字符串')
+    }
+    // function isPalindrome(str) {
+    //     let len = str.length 
+    //     if(len < 2) return true 
+    //     let isOdd = len % 2 === 1
+    //     let start, end 
+    //     if(isOdd) {
+    //         let m = ~~(len / 2)
+    //         start = m - 1
+    //         end = m + 1
+    //     }else {
+    //         end = len / 2 
+    //         start = end - 1
+    //     }
+    //     while(start > -1) {
+    //         let sChar = str.charAt(start) 
+    //         let eChar = str.charAt(end) 
+    //         if(sChar !== eChar) {
+    //             return false 
+    //         }
+    //         start ++
+    //         end --
+    //     }
+    //     return true 
+    // }
 }
