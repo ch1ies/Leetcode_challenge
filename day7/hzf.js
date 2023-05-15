@@ -53,11 +53,20 @@ console.log('maxSum([5,4,-1,7,8]): ', maxSum([-2,1,-3,4,-1,2,1,-5,4] ));
 
 // 感悟总结：
 // 经过了前面6天的练习，现在遇到问题首先去想思路，思路有了，再去用较低复杂度的逻辑，比之前有了一些进步
-
+// 尝试使用复杂度更低的解法去重构
 
 /**
  * 最大子数组和
+ * 动态规划转移方程：f(i)=max{f(i−1)+nums[i],nums[i]}
  */
-// function maxSum(arr) {
-//     // 待实现
-// }
+function maxSum(arr) {
+    if(!Array.isArray(arr)) {
+        return console.log('请输入数组')
+    }
+    let preMax = 0, max = arr[0]
+    for(let i = 0, len = arr.length; i < len; i++) {
+        preMax = Math.max(preMax + arr[i], arr[i])
+        max = Math.max(preMax, max)
+    }
+    return max
+}
