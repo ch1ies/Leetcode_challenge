@@ -14,6 +14,7 @@ function reverseNum(num) {
         return num 
     }
     let ret = [], count = 0 
+    // 这里的ret数组换成字符串，逻辑里做拼加效果也可以
     while(count < nLen) {
         ret[count] = nStr[nLen - 1 - count]
         count ++
@@ -38,10 +39,28 @@ function reverseNum(num) {
 
 // 感悟总结：
 // 对情况的多样性缺乏考虑，对js的Math方法不熟，Math.sign还是通过查阅之后才会的
+// 思考和观察之后，对逻辑进行重写
 
 /**
  * 整数反转
  */
 function reverseNum(num) {
-    // 待实现
+    if(typeof num !== 'number') {
+        return console.log('请输入数字')
+    }
+    function isInvalid(n) {
+        let rangeL = - (2 ** 31)
+        let rangeR = 2 ** 31 - 1
+        return n < rangeL || n > rangeR
+    }
+    let retNum = 0
+    while(num !== 0) {
+        let digit = num % 10 
+        num = ~~(num / 10)
+        retNum = retNum * 10 + digit
+        if(isInvalid(retNum)) {
+            return 0
+        }
+    }
+    return retNum
 }
