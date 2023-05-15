@@ -36,3 +36,9 @@ console.log('res:', findThreeNumSum(arr));
 // 满足题意，但是实际复杂度过高，可以尝试下时间复杂度降为O(n^2)
 
 // 总结
+// 1. 尝试一下使用 两数之和的思路，降低O(n)的复杂度
+// 2. 其他方法
+
+function findThreeNumSum2 (num2) {
+    // 重构 待实现
+}
