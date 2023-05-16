@@ -65,8 +65,30 @@ function threeSum1(arr, sum, ret = []) {
 
 
 /**
- * 三数之和
+ * 三数之和 另外尝试的一种双指针解法，并不一定比两数之和的思路处理三数之和的解法好
  */
 function threeSum(arr, sum, ret = []) {
-    // 待实现
+    if(!Array.isArray(arr) || typeof sum !== 'number') {
+        return console.log('请输入合法参数')
+    }
+    if(arr.length < 3) {
+        return ret
+    }
+    for(let i = 0, len = arr.length; i < len; i++) {
+        let restSum = sum - arr[i]
+        let left = i + 1
+        let right = len - 1
+        while(left < right) {
+            let leftN = arr[left]
+            let rightN = arr[right]
+            if(leftN + rightN === restSum) {
+                ret.push([arr[i], leftN, rightN])
+            }
+            if(left === right) {
+                left = i + 1
+                right--
+            }
+        }
+    }
+    return ret
 }
