@@ -49,3 +49,10 @@ console.log('findMostCapacityBox(nums): ', findMostCapacityBox(nums));
 
 // 总结
 // 使用双指针完成了题目，思考否有复杂度小的算法
+// 1. 修改变量名
+// 2. 使用Math.min 方法
+// 3. 思考：如何减少循环次数
+
+function findMostCapacityBox2() {
+    // 重构
+}
