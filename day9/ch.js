@@ -44,7 +44,8 @@ console.log('findMostCapacityBox(nums): ', findMostCapacityBox(nums));
 // 2.核心在于每次循环比较每次数组的容量，找到最大容量
 
 // 伙伴评价
-
+// 比较好的算法逻辑，实现了功能
+// 建议 1.命名上，sum建议用area或者product 2.从record里观察，多循环了height.length 次 3.compareTowNum 函数可以用Math.min(n1, n2)替代
 
 // 总结
 // 使用双指针完成了题目，思考否有复杂度小的算法
