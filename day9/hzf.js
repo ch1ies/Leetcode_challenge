@@ -42,5 +42,24 @@ function maxArea(height) {
  * 盛最多水的容器
  */
 function maxArea(height) {
-    // 待实现
+    if(!Array.isArray(height)) {
+        return console.log('请输入数组')
+    }
+    let max = 0, len = height.length
+    if(len < 2) {
+        return max
+    }
+    const getArea = (w, h) => w * h
+    let left = 0, right = len - 1
+    while(left < right) {
+        let lNum = height[left], rNum = height[right]
+        let area = getArea(right - left, Math.min(lNum, rNum))
+        max = Math.max(area, max)
+        if(lNum > rNum) {
+            right --
+        }else {
+            left ++
+        }
+    }
+    return max
 }
