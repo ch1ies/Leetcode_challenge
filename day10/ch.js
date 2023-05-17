@@ -33,7 +33,7 @@ function effectiveBracket(str) {
     return false
 }
 // const s = '()' // true
-const s = "()[]{}" // true
+const s = " " // true
 // const s = "(}" // true
 
 console.log('effectiveBracket(s): ', effectiveBracket(s));
@@ -43,6 +43,8 @@ console.log('effectiveBracket(s): ', effectiveBracket(s));
 
 
 // 伙伴评价
-
+// 思路比较好，逻辑实现了题目给定的结果用例，但：
+// 在一些边界问题上需要考虑 如：effectiveBracket('') -> true  effectiveBracket('12') -> true
+// 在一些情况下结果有误，如：effectiveBracket('(][)') -> true effectiveBracket("([)]") -> true
 
 // 总结
