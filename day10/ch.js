@@ -48,3 +48,7 @@ console.log('effectiveBracket(s): ', effectiveBracket(s));
 // 在一些情况下结果有误，如：effectiveBracket('(][)') -> true effectiveBracket("([)]") -> true
 
 // 总结
+// 1. 使用栈实现该类问题
+function effectiveBracket1(str) {
+    // 重构
+}
