@@ -3,7 +3,7 @@
  * @param {string} str 输入的字符串
  * @returns {boolean} 判断是否有效
  */
-function judge(str) {
+function judge1(str) {
     let map = {
         '(': ')',
         '[': ']',
@@ -27,7 +27,6 @@ function judge(str) {
     return stack.length === 0 ? true : false
 }
 
-
 // 输入：s = "()" 输出：true
 // 输入：s = "()[]{}" 输出：true
 // 输入：s = "(]" 输出：false
@@ -39,7 +38,7 @@ function judge(str) {
 // try 1.经过一些思考之后，使用栈的方式最好处理，试了一下没有问题
 
 // 伙伴评价
-
+// 1. 使用栈的数据结构较好的解决了该类问题，算法复杂度控制在O(n)
 
 // 感悟总结：
 // 尝试下用其他方式处理
