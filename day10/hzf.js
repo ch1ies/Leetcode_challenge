@@ -45,8 +45,39 @@ function judge(str) {
 // 尝试下用其他方式处理
 
 /**
- * 有效的括号
+ * 有效的括号 利用map集合判断是否有值，取代Array.includes
  */
 function judge(str) {
-    // 待实现
+    const map = {
+       '(': ')', 
+       '[': ']', 
+       '{': '}'
+    }
+    let len = str.length 
+    if(typeof str !== 'string') {
+        return console.log('请输入字符串')
+    }
+    if(len < 2) {
+        return false
+    }
+    let hasMap = {}, i = 0, stack = []
+    while(true) {
+        let s = str[i]
+        if(map[s]) {
+            stack.push(map[s])
+            hasMap[map[s]] = true
+        }else if(hasMap[s]) {
+            let last = stack.pop()
+            if(s !== last) {
+                return false
+            }
+        }else {
+            return false
+        }
+        i++
+        if(i === len) {
+            break
+        }
+    }
+    return !stack.length
 }

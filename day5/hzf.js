@@ -46,7 +46,8 @@ function theLongestStr(str) {
 
 
 /**
- * 最长回文子串 问题重构
+ * 最长回文子串 问题重构 
+ * 虽然做出来了，但是还是不太满意，之后好好学下动态规划，重新实现下！
  */
 function theLongestStr(str) {
     // 判断是否是回文字符串，暂时不用
