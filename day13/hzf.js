@@ -68,8 +68,23 @@ function delDuplicates1(nums) {
 // 不使用数组的api处理，寻找一种其他思路实现
 
 /**
- * 删除有序数组中的重复项 重构
+ * 删除有序数组中的重复项 重构 使用双指针
  */
 function delDuplicates(nums) {
-    
+    if(!Array.isArray(nums)) {
+        return console.log('请输入数组')
+    }
+    if(!nums.length) {
+        return 0
+    }
+    let left = right = 1
+    for(let i = 1, len = nums.length; i < len; i++) {
+        if(nums[right] !== nums[right - 1]) {
+            nums[left] = nums[right]
+            left ++
+        }
+        right ++ 
+    }
+    nums.length = left
+    return left
 }
