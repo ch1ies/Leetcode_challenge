@@ -30,6 +30,8 @@ console.log('indNumberByOccurOne(nums): ', indNumberByOccurOne(nums));
 // 当前解法仅仅适用于题意，不够通用
 
 // 伙伴评价
+// 比较好的实现了题目的要求
+// 可以考虑更多的方法来实现
 
 // 总结
 // 考虑其他方式来解题

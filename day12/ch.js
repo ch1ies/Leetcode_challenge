@@ -32,7 +32,8 @@ console.log('matchRegex(s, p): ', matchRegex(s, p));
 
 
 // 伙伴评价
-
+// 边界情况考虑的比较周全，比较好的实现了题目要求
+// 但一些特殊情况需要考虑，如：matchRegex('aab', '.ab') 应该为true
 
 // 总结
 
