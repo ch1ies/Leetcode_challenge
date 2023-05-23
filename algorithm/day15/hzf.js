@@ -4,16 +4,16 @@
  * @returns {Array} 返回的括号集合
  */
 function genBrackets(num) {
-	if(typeof num !== 'number') {
+	if (typeof num !== 'number') {
 		return console.log('请输入数字')
 	}
-	if(num === 0) {
+	if (num === 0) {
 		return ''
 	}
 	function genSimple(num) {
 		let lBracket = '(', rBracket = ')'
 		let str = ''
-		while(num) {
+		while (num) {
 			str = lBracket + str + rBracket
 			num--
 		}
@@ -23,46 +23,46 @@ function genBrackets(num) {
 	let simple = genSimple(num)
 	ret.push(simple)
 	function judge(str) {
-    let map = {
-        '(': ')'
-    }
-    let len = str.length
-    let stack = []
-    for(let i = 0; i < len; i++) {
-        let curStr = str[i]
-        if(map[curStr]) {
-            stack.push(map[curStr])
-        }else if(stack.includes(curStr)) {
-            stack.pop()
-        }else {
-            return false
-        }
-    }
-    return stack.length === 0 ? true : false
-  }
-	if(num === 1) {
+		let map = {
+			'(': ')'
+		}
+		let len = str.length
+		let stack = []
+		for (let i = 0; i < len; i++) {
+			let curStr = str[i]
+			if (map[curStr]) {
+				stack.push(map[curStr])
+			} else if (stack.includes(curStr)) {
+				stack.pop()
+			} else {
+				return false
+			}
+		}
+		return stack.length === 0 ? true : false
+	}
+	if (num === 1) {
 		return ret
 	}
 	let sArr = simple.split('')
 	let cursor = num, end = 2 * num - 1, tempArr = [], map = {}
-	while(cursor > 0) {
-		if(cursor === end) {
+	while (cursor > 0) {
+		if (cursor === end) {
 			break
 		}
 		[sArr[cursor - 1], sArr[cursor]] = [sArr[cursor], sArr[cursor - 1]]
 		let str = sArr.join('')
-		if(judge(str) && !map[str]) { // 
+		if (judge(str) && !map[str]) { // 
 			ret.push(str)
 			tempArr.push(str)
 			map[str] = true
 		}
-		cursor --
-		if(cursor === 0) {
+		cursor--
+		if (cursor === 0) {
 			let sStr = tempArr.shift()
 			sArr = sStr.split('')
-			if(tempArr.length > 1) {
+			if (tempArr.length > 1) {
 				cursor = num
-			}else {
+			} else {
 				num++
 				cursor = num
 			}
@@ -76,25 +76,25 @@ function genBrackets(n) {
 	let left = right = n * 2
 	let ret = []
 	function judge(str) {
-    let map = {
-        '(': ')'
-    }
-    let len = str.length
-    let stack = []
-    for(let i = 0; i < len; i++) {
-        let curStr = str[i]
-        if(map[curStr]) {
-            stack.push(map[curStr])
-        }else if(stack.includes(curStr)) {
-            stack.pop()
-        }else {
-            return false
-        }
-    }
-    return stack.length === 0 ? true : false
-  }
+		let map = {
+			'(': ')'
+		}
+		let len = str.length
+		let stack = []
+		for (let i = 0; i < len; i++) {
+			let curStr = str[i]
+			if (map[curStr]) {
+				stack.push(map[curStr])
+			} else if (stack.includes(curStr)) {
+				stack.pop()
+			} else {
+				return false
+			}
+		}
+		return stack.length === 0 ? true : false
+	}
 	function gen(left, right, str, ret) {
-		if(left > 0 && right > 0) {
+		if (left > 0 && right > 0) {
 			gen(--left, right, str + '(', ret)
 			gen(left, --right, str + ')', ret)
 		} else {
@@ -118,7 +118,8 @@ function genBrackets(n) {
 // try 3.将终止条件修改了之后，成功
 
 // 伙伴评价
-
+// 能使用迭代的方式进行尝试实现，很不错
+// 对与递归实现的题目分步骤思考，多总结
 
 // 感悟总结：
 // 当一种思路解不出来时，要果断放弃尝试其他思路
@@ -127,5 +128,5 @@ function genBrackets(n) {
  * 括号生成
  */
 function genBrackets(num) {
-  //  待实现
+	//  待实现
 }

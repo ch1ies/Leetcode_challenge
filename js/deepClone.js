@@ -1,8 +1,9 @@
 /**
  * 深拷贝
+ * 1.考虑自引用
  */
 // 1. 使用 MessageChannel 实现
-const obj = { name: 'vary', age: 12}
+const obj = { name: 'vary', age: 12, c: { name: 'chiles'}}
 
 function deepCopy(obj) {
     return new Promise((resolve, reject) => {
