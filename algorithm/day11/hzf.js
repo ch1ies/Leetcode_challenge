@@ -48,5 +48,20 @@ function catchRain(height) {
  * 接雨水 重构
  */
 function catchRain(height) {
-    
+    if(!Array.isArray(height)) {
+        return console.log('请输入合法参数')
+    }
+    let left = 0, right = height.length - 1, lMax = rMax = 0, sum = 0
+    while(left < right) {
+        lMax = Math.max(height[left], lMax)
+        rMax = Math.max(height[right], rMax)
+        if(height[left] < height[right]) {
+            sum += (lMax - height[left])
+            left ++
+        }else {
+            sum += (rMax - height[right])
+            right --
+        }
+    }
+    return sum
 }
