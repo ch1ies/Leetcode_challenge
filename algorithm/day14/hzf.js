@@ -63,5 +63,12 @@ function findNum1(nums) {
  * 只出现一次的数字 重构 
  */
 function findNum(nums) {
-    // 待实现
+		if(!Array.isArray(nums)) {
+			return console.log('请输入数组')
+		}
+    let ret = 0 
+		for(let i = 0, len = nums.length; i < len; i++) {
+			ret ^= nums[i]
+		}
+		return ret
 }
