@@ -52,6 +52,7 @@ function generateBracket1(num) {
         return bol === 0
     }
     gen([])
+    return container
 }
 generateBracket1(3)
 
@@ -60,6 +61,7 @@ generateBracket1(3)
 // 看了官方答案，才想到使用递归
 
 // 伙伴评价
+// 逻辑较好的实现了功能
 
 // 总结
 // 对使用递归解题的思路进行加强训练
