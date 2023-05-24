@@ -66,5 +66,34 @@ function reverseLink(nums) {
  * 翻转链表 重构
  */
 function reverseLink(nums) {
-	// 待实现
+	if(!Array.isArray(nums)) {
+		return console.log('请输入正确参数')
+	}
+	function Node(val) {
+		this.val = val 
+		this.next = null
+	}
+	function createLink(arr) {
+		let head, cur 
+		for(let i = 0, len = arr.length; i < len; i++) {
+			let n = new Node(arr[i])
+			if(!head) {
+				head = cur = n 
+				continue
+			}
+			cur.next = n 
+			cur = n 
+		}
+		return head
+	}
+	function rever(link) {
+		if(link.next === null || link === null) {
+			return link
+		}
+		let newHead = rever(link.next)
+		link.next.next = link 
+		link.next = null
+		return newHead
+	}
+	return rever(createLink(nums))
 }
