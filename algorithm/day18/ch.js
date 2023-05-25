@@ -11,3 +11,13 @@ function climbLadder(n) {
 }
 console.log('climbLadder(3): ', climbLadder(3)); // 3
 // console.log('climbLadder(10): ', climbLadder(10)); // 89
+
+
+// 过程
+// 1. 可以用动态规划的思路去保存求解过的值
+
+// 伙伴评价
+
+
+// 总结
+
