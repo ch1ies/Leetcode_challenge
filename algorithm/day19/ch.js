@@ -41,6 +41,7 @@ function findMostLengthSeries1(nums) {
         dp.push(1)
         for (let j = 0; j < i; j++) {
             if (nums[i] > nums[j]) {
+                console.log('j: ', j);
                 dp[i] = Math.max(dp[i],dp[j] + 1)
             }
         }
@@ -52,8 +53,8 @@ function findMostLengthSeries1(nums) {
     return max
 }
 // const nums = [0,1,0,3,2,3] // 输出4
-// const nums = [10,9,2,5,3,7,101,18] // 输出4
-const nums = [7,7,7,7,7,7,7]  // 输出1
+const nums = [10,9,2,5,3,7,101,18] // 输出4
+// const nums = [7,7,7,7,7,7,7]  // 输出1
 console.log('findMostLengthSeries(nums): ', findMostLengthSeries1(nums));
 
 
