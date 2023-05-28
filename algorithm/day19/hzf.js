@@ -50,7 +50,7 @@ function theLongestIncQue(nums) {
 
 
 // 伙伴评价
-
+// 可以尝试使用动态规划思想
 
 // 感悟总结：
 // 多考虑一些边界条件
