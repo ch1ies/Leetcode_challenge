@@ -28,7 +28,8 @@ console.log('findBestTimeForSaleStock(prices): ', findBestTimeForSaleStock(price
 // 增加边界判断条件，成功
 
 // 伙伴评价
-
+// 比较好的实现了题目所需功能
+// 但是时间复杂度可以再降低一点
 
 // 总结
 // 时间复杂度为O(n^2), 看是否有优化的算法
