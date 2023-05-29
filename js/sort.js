@@ -13,10 +13,11 @@ function bubbleSort(arr) {
 // 选择排序
 function selectionSort(arr) {
   for(let i = 0, len = arr.length; i < len - 1; i++) {
-    let min = arr[i]
+    let minInx = i
     for(j = i + 1; j < len; j++) {
-      if(arr[j] < arr[min]) {
-        [arr[j], arr[min]] = [arr[min], arr[j]]
+      if(arr[j] < arr[minInx]) {
+        [arr[j], arr[minInx]] = [arr[minInx], arr[j]]
+        minInx = j
       }
     }
   }
@@ -24,6 +25,9 @@ function selectionSort(arr) {
 }
 // 快速排序
 function quickSort(arr) {
+  if(arr.length <= 1) {
+    return arr
+  }
   let left = [], right = []
   let midInx = Math.floor(arr.length / 2)
   let mid = arr.splice(midInx, 1)[0]

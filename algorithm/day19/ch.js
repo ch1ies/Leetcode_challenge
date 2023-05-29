@@ -62,7 +62,7 @@ console.log('findMostLengthSeries(nums): ', findMostLengthSeries1(nums));
 
 
 // 伙伴评价
-
+// 使用了多种方法实现了功能
 
 // 总结
 // 此类题目多练习，多熟悉动态规划思想
