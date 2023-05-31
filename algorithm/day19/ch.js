@@ -59,7 +59,7 @@ console.log('findMostLengthSeries(nums): ', findMostLengthSeries1(nums));
 
 
 // 过程
-// 本来想着用双指诊的方式去实现，后发现复杂度较高，看了官方答案，使用了动态规划的思想
+// 本来想着用双指针的方式去实现，后发现复杂度较高，看了官方答案，使用了动态规划的思想
 
 
 // 伙伴评价
